@@ -11,6 +11,10 @@ public class RollerCoaster  extends Attraction implements ISecurity {
 
     @Override
     public boolean isAllowedTo(Visitor visitor) {
-        return false;
+        if(visitor.getAge() > 12 && visitor.getHeight() > 145.00) {
+            return true;
+        }
+        else return false;
+        }
     }
-}
+
